@@ -1,3 +1,9 @@
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import SplitText from 'gsap/SplitText'
+
+gsap.registerPlugin(ScrollTrigger, SplitText)
+
 const burger = document.querySelector('.ui .burger')
 if (burger) {
   burger.addEventListener('click', e => {
@@ -6,6 +12,33 @@ if (burger) {
     burger.classList.toggle('active')
   })
 }
+
+ScrollTrigger.batch('.ui__color', {
+  once: true,
+  onEnter: batch => gsap.from(batch, {
+    opacity: 0,
+    y: 50,
+    stagger: 0.2,
+    duration: 0.5,
+  })
+});
+
+document.fonts.ready.then(() => {
+  const title = document.querySelectorAll('.index-first__text')
+  const split = SplitText.create(title, { type: 'lines', mask: true, autoSplit: true })
+
+  gsap.from(split.lines, {
+    scrollTrigger: {
+      trigger: title,
+      start: 'top 80%',
+    },
+    opacity: 0,
+    y: 50,
+    stagger: 0.1,
+    duration: 0.5,
+  })
+})
+
 
 const headerBurger = document.querySelector('.header__burger')
 const headerMenu = document.querySelector('.header__menu')
