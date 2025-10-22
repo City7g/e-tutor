@@ -9,13 +9,15 @@ input[type='tel'] {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid $primary;
+  border: 1px solid #e9eaf0;
   border-radius: $radius;
   background-color: $white;
-  transition: outline-color 0.4s ease-in-out, outline-offset 0.4s ease-in-out;
+  transition: border-color 0.3s ease;
 
   &:focus {
-    outline: 1px solid $primary;
+    border-color: $primary;
+    outline: none;
+    // outline: 1px solid $primary;
   }
 
   &:disabled {
