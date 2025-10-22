@@ -1,0 +1,144 @@
+extends ../layouts/main
+
+block variables
+  - const title = 'UI'
+
+block content
+  - const icomoon = ['icon-ArrowLeft', 'icon-ArrowRight', 'icon-Copy', 'icon-DiscordLogo', 'icon-EnvelopeSimple', 'icon-Eye', 'icon-EyeSlash', 'icon-Globe', 'icon-InstagramLogo', 'icon-List', 'icon-LockKey', 'icon-MagnifyingGlass', 'icon-Plus', 'icon-Rocket', 'icon-RocketLaunch', 'icon-Storefront', 'icon-TrendUp', 'icon-TwitterLogo', 'icon-User', 'icon-UserCircle', 'icon-Wallet', 'icon-YoutubeLogo']
+
+  section
+    .container
+      .ui
+        aside.ui__aside
+          a(href='#text') Text
+          a(href='#avatars') Avatar
+          a(href='#buttons') Buttons
+          a(href='#all') All
+
+        .ui__main
+          h1.ui__title UI page
+
+          .ui__content
+            .ui__wrap.ui__fonts
+              h4.ui__caption Font: Circe
+              p.title-h1 Start Template
+              p.title-h2 Start Template
+              p.title-h3 Start Template
+              p.title-h4 Start Template
+              p.title-h5 Start Template
+              p.title-h6 Start Template
+              p.text-p1 Start Template
+              p.text-p2 Start Template
+              p.text-p3 Start Template
+
+          .ui__content
+            .ui__wrap
+              h4.ui__caption Icomoon
+              each icon in icomoon
+                i(class=`${icon}`)
+
+          .ui__content
+            .ui__wrap.ui__wrap--column
+              h4.ui__caption Colors
+              .ui__colors
+                .ui__color(style='background: #2B2B2B; color: white')
+                  span $black
+                  span #2B2B2B
+                .ui__color(style='background: #3B3B3B; color: white')
+                  span $bg
+                  span #3B3B3B
+                .ui__color(style='background: #858584; color: white')
+                  span $text
+                  span #858584
+                .ui__color(style='border: 1px solid #3B3B3B')
+                  span $white
+                  span #FFFFFF
+              .ui__colors
+                .ui__color(style='background: #39b100; color: white')
+                  span $primary
+                  span #39b100
+                .ui__color(style='background: #ef4036; color: white')
+                  span $secondary
+                  span #ef4036
+
+          .ui__content
+            .ui__wrap
+              h4.ui__caption Button
+              button.btn Primary button
+              button.btn.btn--secondary Secondary button
+              button.btn.btn--outline Primary button
+              button.btn.btn--outline.btn--secondary Secondary button
+
+          .ui__content
+            .ui__wrap
+              h4.ui__caption Button disabled
+              button.btn(disabled) Disabled button
+              button.btn.btn--secondary(disabled) Secondary button
+              button.btn.btn--outline(disabled) Disabled button
+              button.btn.btn--outline.btn--secondary(disabled) Secondary button
+
+          .ui__content
+            .ui__wrap
+              h4.ui__caption Burger
+              button.burger
+                span
+                span
+                span
+          .ui__content
+            .ui__wrap
+              h4.ui__caption Input
+              input(type='text' placeholder='Type text')
+              input(type='email' placeholder='Type email')
+              input(type='password' placeholder='Type password')
+              input(type='text' placeholder='Disabled input' disabled)
+          .ui__content
+            .ui__wrap.ui__wrap--column
+              h4.ui__caption Input checkbox
+              label.label
+                input#checkbox(type='checkbox')
+                p Checkbox
+              label.label
+                input#checkboxChecked(type='checkbox' checked='checked')
+                p Checkbox Checked
+              label.label
+                input#checkboxDisabled(type='checkbox' disabled='disabled')
+                p Checkbox Disabled
+          .ui__content
+            .ui__wrap.ui__wrap--column
+              h4.ui__caption Input radio
+              label.label
+                input#radio(type='radio' name='radio')
+                p Radio One
+              label.label
+                input#radioChecked(type='radio' name='radio' checked='checked')
+                p Radio Two
+              label.label
+                input#radioDisabled(type='radio' name='radio' disabled='disabled')
+                p Radio Disabled
+          .ui__content
+            .ui__wrap.ui__wrap--column
+              h4.ui__caption Switches
+              label.label
+                input#switch(type='checkbox' role='switch')
+                p Switch One
+              label.label
+                input#switchChecked(type='checkbox' role='switch' checked='checked')
+                p Switch Two
+              lable.label
+                input#switchDisabled(type='checkbox' role='switch' disabled='disabled')
+                p Switch Disabled
+          .ui__content
+            .ui__wrap.ui__wrap--column
+              h4.ui__caption Select
+              select
+                option One
+                option Two
+                option Three
+              select(disabled='disabled')
+                option One
+                option Two
+                option Three
+          .ui__content
+            .ui__wrap
+              h4.ui__caption Spinner
+              .spinner.color(role='status')

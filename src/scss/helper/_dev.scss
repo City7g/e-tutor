@@ -1,0 +1,99 @@
+a {
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(255 0 0 / 40%) 0,
+    rgb(255 0 0 / 40%) 5px,
+    rgb(255 0 0 / 20%) 5px,
+    rgb(255 0 0 / 20%) 10px
+  );
+  background-color: rgba(red, 0.3);
+  outline: 2px solid red;
+}
+
+button {
+  position: relative;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(0 0 255 / 40%) 0,
+    rgb(0 0 255 / 40%) 5px,
+    rgb(0 0 255 / 20%) 5px,
+    rgb(0 0 255 / 20%) 10px
+  );
+  background-color: rgba(blue, 0.3);
+  outline: 2px solid blue;
+}
+
+p {
+  position: relative;
+}
+
+p::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 255, 0, 0.4) 0px,
+    rgba(0, 255, 0, 0.4) 5px,
+    rgba(0, 255, 0, 0.2) 5px,
+    rgba(0, 255, 0, 0.2) 10px
+  );
+  background-color: rgba(green, 0.3);
+  outline: 2px solid green;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+h1::after,
+h2::after,
+h3::after,
+h4::after,
+h5::after,
+h6::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 255, 255, 0.4) 0px,
+    rgba(0, 255, 255, 0.4) 5px,
+    rgba(0, 255, 255, 0.2) 5px,
+    rgba(0, 255, 255, 0.2) 10px
+  );
+  background-color: rgba(yellow, 0.3);
+  outline: 2px solid yellow;
+}

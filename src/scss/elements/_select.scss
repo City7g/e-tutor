@@ -1,0 +1,30 @@
+select {
+  display: block;
+
+  width: 100%;
+  padding: 6px 36px 6px 12px;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background-color: #fff;
+  background-image: url('/img/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 12px;
+  appearance: none;
+
+  &:focus-visible {
+    border: 1px solid #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba($primary, 0.25);
+  }
+
+  &:disabled {
+    border-color: rgba(#dee2e6, 0.5);
+    background-color: rgba(#dee2e6, 0.5);
+    cursor: not-allowed;
+  }
+}

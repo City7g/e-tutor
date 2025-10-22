@@ -1,0 +1,23 @@
+
+header.header
+  include ../components/logo
+  .header__wrap
+    +logo.header__logo
+
+    nav.header__menu
+      ul.header__menu-list
+        li.header__menu-item
+          a.header__menu-link(href='/') Home
+        li.header__menu-item
+          a.header__menu-link(href='/about.html') About
+        if (mode === 'development')
+          li.header__menu-item
+            a.header__menu-link(href='/ui.html') UI
+      button.btn.header-btn.header__btn
+        i.icon-User.btn__icon
+        | Sign Up
+
+    button.burger.header__burger(aria-label='Menu')
+      span
+      span
+      span

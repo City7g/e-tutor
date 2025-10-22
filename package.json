@@ -1,0 +1,39 @@
+{
+  "name": "start-gulp-template",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development gulp",
+    "build": "NODE_ENV=production gulp build",
+    "stylelint": "stylelint \"./src/scss/**/*.scss\" --fix",
+    "test": "stylelint \"./src/scss/**/*.scss\" --fix",
+    "pre-commit": "stylelint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.3.3",
+    "gsap": "^3.9.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "dotenv-webpack": "^8.0.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-esbuild": "^0.11.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3",
+    "stylelint": "^16.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.2.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack-stream": "^7.0.0"
+  }
+}

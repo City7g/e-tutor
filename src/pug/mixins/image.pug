@@ -1,0 +1,17 @@
+mixin image(url, loading = 'lazy')
+  if (image !== 'format')
+    img(src=`${url}.jpg` alt="" loading=`${loading}`)&attributes(attributes)
+  else
+    picture&attributes(attributes)
+      source(srcset=`${url}.avif, ${url}-2x.avif 2x, ${url}-3x.avif 3x` type="image/avif")
+      source(srcset=`${url}.webp, ${url}-2x.webp 2x, ${url}-3x.webp 3x` type="image/webp")
+      img(src=`${url}.jpg` srcset=`${url}.jpg, ${url}-2x.jpg 2x, ${url}-3x.jpg 3x` alt="" loading=`${loading}`)
+
+mixin img(url, loading = 'lazy')
+  if (image !== 'format')
+    img(src=`${url}.jpg` alt="" loading=`${loading}`)&attributes(attributes)
+  else 
+    picture&attributes(attributes)
+      source(srcset=`${url}.avif` type="image/avif")
+      source(srcset=`${url}.webp` type="image/webp")
+      img(src=`${url}.jpg` alt="" loading=`${loading}`)

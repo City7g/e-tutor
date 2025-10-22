@@ -1,0 +1,57 @@
+.burger {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  transition: 0.3s background-color ease;
+  border-radius: $radius;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $black;
+  }
+
+  & span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $black;
+    transition: 0.3s all ease;
+
+    &:nth-child(1) {
+      transform: translate(-50%, calc(-50% - 5px));
+    }
+
+    &:nth-child(2) {
+      transform: translate(-50%, -50%);
+    }
+
+    &:nth-child(3) {
+      transform: translate(-50%, calc(-50% + 5px));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  &.active span {
+    &:nth-child(1) {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}

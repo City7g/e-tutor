@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s background-color ease;
+  border-radius: $radius;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+
+  &:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid $black;
+  }
+}
+
+.logo__icon {
+  color: $primary;
+}
+
+.logo__text {
+  font-weight: 700;
+  white-space: nowrap;
+}

@@ -1,0 +1,106 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  color: $white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  border: 1px solid $primary;
+  border-radius: $radius;
+  background-color: $primary;
+  transition: 0.3s all ease;
+
+  &:hover {
+    border-color: darken($primary, 5);
+    background-color: darken($primary, 5);
+  }
+
+  &:focus-visible {
+    border-color: darken($primary, 5);
+    background-color: darken($primary, 5);
+    outline: none;
+    box-shadow: 0 0 0 6px rgba($primary, 0.25);
+  }
+
+  &:active {
+    border-color: darken($primary, 10);
+    background-color: darken($primary, 10);
+  }
+
+  &:disabled {
+    color: $white;
+    border-color: transparent;
+    background-color: rgba($primary, 0.3);
+  }
+
+  @media (min-width: 1200px) {
+    padding: 8px 20px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.btn--secondary {
+  border-color: $secondary;
+  background-color: $secondary;
+
+  &:hover {
+    border-color: darken($secondary, 5);
+    background-color: darken($secondary, 5);
+  }
+
+  &:disabled {
+    color: $white;
+    border-color: transparent;
+    background-color: rgba($secondary, 0.3);
+  }
+}
+
+.btn__icon {
+  font-size: 20px;
+  transition: 0.3s all ease;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: $primary;
+
+  &:hover {
+    color: $white;
+  }
+
+  &:disabled {
+    color: rgba($primary, 0.3);
+    border-color: rgba($primary, 0.3);
+    background-color: transparent;
+  }
+}
+
+.btn--outline .btn__icon {
+  color: $primary;
+}
+
+.btn--outline:hover .btn__icon {
+  color: $white;
+}
+
+.btn--outline.btn--secondary {
+  border-color: $secondary;
+  color: $secondary;
+
+  &:hover {
+    color: $white;
+  }
+
+  &:disabled {
+    color: rgba($secondary, 0.3);
+    border-color: rgba($secondary, 0.3);
+    background-color: transparent;
+  }
+}

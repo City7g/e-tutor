@@ -1,0 +1,84 @@
+.title-h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media (min-width: 1200px) {
+    font-size: 2.5rem;
+  }
+}
+
+.title-h2 {
+  font-size: calc(1.325rem + 0.9vw);
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media (min-width: 1200px) {
+    font-size: 2rem;
+  }
+}
+
+.title-h3 {
+  font-size: calc(1.3rem + 0.6vw);
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media (min-width: 1200px) {
+    font-size: 1.75rem;
+  }
+}
+
+.title-h4 {
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media (min-width: 1200px) {
+    font-size: 1.5rem;
+  }
+}
+
+.title-h5 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.title-h6 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.text-p1 {
+  font-size: calc(1rem + 0.3vw);
+  line-height: 1.5;
+
+  @media (min-width: 1200px) {
+    font-size: 1.25rem;
+  }
+}
+
+.text-p2 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+
+  @media (min-width: 1200px) {
+    font-size: 1rem;
+  }
+}
+
+.text-p3 {
+  font-size: 0.75rem;
+  line-height: 1.5;
+
+  @media (min-width: 1200px) {
+    font-size: 0.875rem;
+  }
+}
+
+.text-p1,
+.text-p2,
+.text-p3 {
+  color: $text;
+}

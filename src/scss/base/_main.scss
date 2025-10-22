@@ -1,0 +1,29 @@
+html {
+  scrollbar-width: thin;
+  scrollbar-color: $primary transparent;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: $black;
+  font-family: Circe;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: $white;
+}
+
+main {
+  flex-grow: 1;
+  margin-top: 60px;
+
+  @media (min-width: 1200px) {
+    margin-top: 80px;
+  }
+}
+
+::selection {
+  color: $white;
+  background-color: $black;
+}

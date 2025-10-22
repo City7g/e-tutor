@@ -1,0 +1,30 @@
+input[role='switch'] {
+  width: 32px;
+  height: 16px;
+
+  border-radius: 8px;
+
+  &::after {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background: #dfdfdf;
+
+    transform: translate(calc(-50% - 8px), -50%);
+  }
+
+  &:checked {
+    background-color: $primary;
+  }
+
+  &:checked::after {
+
+    background: white;
+    transform: translate(calc(-50% + 8px), -50%);
+  }
+
+  &:disabled::after {
+    background: rgba(#dfdfdf, 0.5);
+  }
+}

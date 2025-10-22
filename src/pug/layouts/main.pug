@@ -1,0 +1,26 @@
+include ../mixins/image
+include ../mixins/input
+include ../components/logo
+
+block variables
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= title ? `${title} | Start Template` : 'Start Template'
+    link(rel="stylesheet" href="/main.css")
+    include ../utils/preload
+    meta(name="description" content="Start Template Description - test sity for develop start template")
+    include ../utils/og
+    meta(name="theme-color" content="#000000")
+  body
+    include ../components/header
+
+    main
+      block content
+
+    include ../components/footer
+
+    script(src="/main.js") 
